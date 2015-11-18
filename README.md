@@ -1,5 +1,3 @@
-#OpenDaylight
-
 Welcome!
 ========
 
