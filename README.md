@@ -21,52 +21,52 @@ Make Magic Work:
 ================
 
 Vagrant Up <br />
--provision with tempest.api.network Vagrantfile 
--mount host webroot directory to vagrant VM
--use latest Ubuntu vagrant box
--run Setup.sh
--cache the pip configurations
--copy local.conf stored on host into vagrant's devstack directory
--run build.sh
--run networkapitest.sh
--run copyandclean.sh
+-provision with tempest.api.network Vagrantfile <br />
+-mount host webroot directory to vagrant VM <br />
+-use latest Ubuntu vagrant box <br />
+-run Setup.sh <br /> 
+-cache the pip configurations <br />
+-copy local.conf stored on host into vagrant's devstack directory <br />
+-run build.sh <br />
+-run networkapitest.sh <br />
+-run copyandclean.sh <br />
 
-Setup.sh
--update box with all latest Ubuntu packages
--add vagrant user as a sudoer
--install python packages
--remove python-six
--clone devstack
--download latest OVS package
--build newest OVS package
+Setup.sh <br />
+-update box with all latest Ubuntu packages <br />
+-add vagrant user as a sudoer <br />
+-install python packages <br />
+-remove python-six <br />
+-clone devstack <br />
+-download latest OVS package <br />
+-build newest OVS package <br />
 
-Build.sh
--run stack.sh
+Build.sh <br />
+-run stack.sh <br />
 
-Networkapitest.sh
--initialize testr
--make sure pip is installed
--remove python-six again
--run "testr run tempest.api.network" with subunit options
--ensure results directory is made (the one mounted to host webroot)
--use subunit to convert test results into an html file
--remove any existing files/logs
--copy new html file and test results logs to mounted directory
+Networkapitest.sh <br />
+-initialize testr <br />
+-make sure pip is installed <br />
+-remove python-six again <br />
+-run "testr run tempest.api.network" with subunit options <br />
+-ensure results directory is made (the one mounted to host webroot) <br />
+-use subunit to convert test results into an html file <br />
+-remove any existing files/logs <br />
+-copy new html file and test results logs to mounted directory <br />
 
-Copyandclean.sh
--remove symbolic links (.log, .summary, .log.summary files)
--copy html file from mounted directory to second webroot
--copy new logs from mounted directory to second webroot
--remove existing log zipped folder
--create new zipped log folder
--run grep.sh
--push all new files up to github
+Copyandclean.sh <br />
+-remove symbolic links (.log, .summary, .log.summary files) <br />
+-copy html file from mounted directory to second webroot <br />
+-copy new logs from mounted directory to second webroot <br />
+-remove existing log zipped folder <br />
+-create new zipped log folder <br />
+-run grep.sh <br/>
+-push all new files up to github <br />
 
-Grep.sh
--grep the summary of all tests from html file
--remove html tags
--get number of Passed/Failed/Skip tests
--put numbers into text file (to later be used to generate javascript graphs)
+Grep.sh <br />
+-grep the summary of all tests from html file <br />
+-remove html tags <br />
+-get number of Passed/Failed/Skip tests <br />
+-put numbers into text file (to later be used to generate javascript graphs) <br />
  
 
 Contacts:
