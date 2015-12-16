@@ -20,8 +20,8 @@ Openstack:
 Make Magic Work:
 ================
 
-Vagrant Up
--provision with tempest.api.network Vagrantfile
+Vagrant Up <br />
+-provision with tempest.api.network Vagrantfile 
 -mount host webroot directory to vagrant VM
 -use latest Ubuntu vagrant box
 -run Setup.sh
